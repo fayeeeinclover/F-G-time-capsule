@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faye 的时光胶囊</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>✨ Faye's Time Capsule ✨</h1>
+    
+    <div class="controls">
+        <label>Year: <input type="number" id="yearInput" value="2026"></label>
+        <label>Month: <input type="number" id="monthInput" value="2"></label>
+        <button onclick="loadCalendar()">打开胶囊</button>
+    </div>
+
+    <div id="calendar-grid"></div>
+
+    <div id="modal-overlay" class="hidden">
+        <div class="modal-card">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            
+            <div class="modal-header">
+                <div id="modal-year">二〇二六</div>
+                <div id="modal-date">一月一日</div>
+                <div id="modal-tags"></div>
+            </div>
+
+            <div id="modal-text" class="modal-content"></div>
+
+            <div class="modal-footer">
+                —— 致未来的 Faye
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

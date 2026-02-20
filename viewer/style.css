@@ -120,4 +120,62 @@ button { background-color: var(--accent-color); border: none; color: white; padd
 }
 
 .modal-footer { margin-top: 40px; text-align: right; color: #999; font-size: 0.9em; font-style: italic; }
+
 .hidden { display: none; }
+/* --- 📱 手机端专属适配 (响应式设计) --- */
+@media (max-width: 768px) {
+    #calendar-grid {
+        gap: 6px; /* 缩小格子之间的间距 */
+        padding: 0 5px;
+    }
+    
+    .day-card {
+        height: 55px; /* 让高个子变矮，看起来更接近正方形 */
+        padding: 4px;
+        border-radius: 8px;
+    }
+    
+    .date-num { 
+        font-size: 0.9em; 
+        margin-bottom: 2px;
+    }
+    
+    /* 缩小节日和节气的小标签 */
+    .tag {
+        font-size: 0.55em;
+        padding: 1px 3px;
+        bottom: 3px;
+        right: 3px;
+        border-radius: 3px;
+    }
+
+    /* 缩小提示有内容的小蓝点 */
+    .has-content-dot {
+        width: 4px; 
+        height: 4px; 
+        top: 6px; 
+        right: 6px;
+    }
+
+    /* 顶部控制区的输入框也变紧凑点 */
+    .controls {
+        margin-bottom: 15px;
+    }
+    input {
+        width: 45px;
+        padding: 3px 10px;
+    }
+    
+    /* 让弹出来的信纸在手机上更宽一点，字号合适 */
+    .modal-card {
+        width: 85%;
+        padding: 25px 20px;
+    }
+    .modal-content {
+        font-size: 1.1em;
+        margin-top: 20px;
+    }
+    #modal-date {
+        font-size: 1.5em;
+    }
+}
